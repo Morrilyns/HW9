@@ -14,4 +14,8 @@ perimeter(triangle), perimeter(rectangle)
 
 # Test the distance function
 distance(p1, p2), distance(Point3D{Float64}(1.0, 2.0, 3.0), Point3D{Float64}(4.0, 5.0, 6.0))
- 
+
+@testset "Midpoint caclulations" begin
+  @test midpoint(triangle) == Point2D(1/3,1/3)
+  @test midpoint(rectangle) == Point2D(0.5,1)
+end
