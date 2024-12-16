@@ -72,5 +72,11 @@ function isRectangular(polygon::Polygon)
     false
 end
 
+"""
+midpoint(p::Polyon)
+calculates the midpoint of the polygon.
+"""
+midpoint(p::Polygon) = Point2D(mean(map(pt -> pt.x, p.pts)), mean(map(pt -> pt.y, p.pts)))
+
+
 end # End of module Geometry
- 
